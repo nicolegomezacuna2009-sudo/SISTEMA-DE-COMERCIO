@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(120deg, #fff8ed, #f5e2c5);
+  padding: 65px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-texto {
+  max-width: 550px;
+}
+
+.etiqueta {
+  color: #c12727;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 58px);
+  line-height: 1.12;
+  color: #202020;
+  margin: 18px 0;
+}
+
+.hero h1 span {
+  color: #bd2929;
+}
+
+.hero p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.hero button,
+.producto-info button,
+.perfil-card form button {
+  background: #c32727;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 14px 22px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.hero button:hover,
+.producto-info button:hover,
+.perfil-card form button:hover {
+  background: #9e1717;
+}
+
+.hero-imagen {
+  max-width: 480px;
+  width: 45%;
+}
+
+.hero-imagen img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px #0002;
+}
+
+.categorias,
+.catalogo {
+  padding: 45px 7%;
+}
+
+.categorias h2,
+.titulo-seccion h2 {
+  font-size: 27px;
+  color: #222;
+}
+
+.categorias-lista {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.categoria {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.categoria:hover,
+.categoria.activa {
+  background: #c32727;
+  color: white;
+  border-color: #c32727;
+}
+
+.titulo-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.titulo-seccion > span {
+  color: #777;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.producto-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 15px #0000000d;
+  transition: transform 0.2s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+.producto-imagen {
+  height: 210px;
+  position: relative;
+  background: #f5f5f5;
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.oferta {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  background: #c32727;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.producto-info {
+  padding: 18px;
+}
+
+.producto-categoria {
+  color: #ad812c;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.producto-info h3 {
+  color: #222;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+.producto-info p {
+  color: #777;
+  font-size: 13px;
+}
+
+.estrellas {
+  color: #e1a62e;
+  margin: 10px 0;
+}
+
+.producto-precio {
+  font-size: 21px;
+  color: #c32727;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.producto-info button {
+  width: 100%;
+}
+
+.carrito-pagina,
+.perfil-pagina {
+  padding: 55px 7%;
+  min-height: 65vh;
+}
+
+.carrito-pagina h1 {
+  color: #222;
+}
+
+.carrito-vacio {
+  text-align: center;
+  padding: 60px 10px;
+  background: #fafafa;
+  border-radius: 12px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.carrito-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carrito-detalle {
+  flex: 1;
+}
+
+.carrito-detalle h3 {
+  color: #222;
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.cantidad button {
+  padding: 7px 12px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.eliminar {
+  border: none;
+  background: #c32727;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resumen {
+  background: #fff8ed;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.resumen h3 {
+  color: #222;
+}
+
+.resumen button {
+  padding: 12px 18px;
+  margin: 8px 8px 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.resumen button:hover {
+  background: #c32727;
+}
+
+.aviso-pago {
+  font-size: 12px;
+  color: #777;
+}
+
+.perfil-pagina {
+  display: flex;
+  justify-content: center;
+}
+
+.perfil-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px #0001;
+  padding: 35px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.perfil-card h1 {
+  color: #222;
+}
+
+.perfil-card p {
+  color: #777;
+}
+
+.perfil-icono {
+  font-size: 45px;
+}
+
+.perfil-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.perfil-card label {
+  font-weight: bold;
+  color: #333;
+}
+
+.perfil-card input {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+
+.footer {
+  background: #171717;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 40px;
+}
+
+.footer h2 {
+  color: #e8b84c;
+}
+
+.footer p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+@media (max-width: 750px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-imagen {
+    width: 100%;
+  }
+
+  .titulo-seccion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
